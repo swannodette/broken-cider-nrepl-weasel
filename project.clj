@@ -4,16 +4,16 @@
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
   :dependencies [[org.clojure/clojure "1.6.0"]
-                 [org.clojure/clojurescript "0.0-2268"]
+                 [org.clojure/clojurescript "0.0-2850"]
                  [org.clojure/core.async "0.1.278.0-76b25b-alpha"]
 
-                 [om "0.6.4"]
-                 [garden "1.1.8"]
+                 [org.omcljs/om "0.8.9-SNAPSHOT" :exclusions [cljsjs/react]]
+                 [cljsjs/react-with-addons "0.12.2-4" :exclusions [cljsjs/react]]
 
-                 [com.cemerick/piggieback "0.1.3"]
-                 [weasel "0.2.1"]]
+                 [com.cemerick/piggieback "0.1.6-SNAPSHOT"]
+                 [weasel "0.6.0-SNAPSHOT"]]
   :plugins [[lein-cljsbuild "1.0.3"]
-            [cider/cider-nrepl "0.7.0-SNAPSHOT"]]
+            [cider/cider-nrepl "0.8.2"]]
   :cljsbuild {:builds [{:id "client"
                         :source-paths ["src/"]
                         :compiler {:output-to "resources/public/main.js"

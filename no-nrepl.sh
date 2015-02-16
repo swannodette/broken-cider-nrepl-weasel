@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+CLJSC_CP=$(lein classpath)
+
+java -server -cp $CLJSC_CP clojure.main -e "
+(require '[cljs.repl :as r])
+(require '[weasel.repl.websocket :as w])
+(r/repl (w/repl-env :port 9003))
+"

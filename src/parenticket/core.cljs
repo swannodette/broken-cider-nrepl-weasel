@@ -28,3 +28,5 @@
 
 (om/root foo app-state {:target (js/document.getElementById "main")})
 
+
+(js/alert 42)
